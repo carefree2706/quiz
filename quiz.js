@@ -49,7 +49,7 @@ next_btn.onclick = () => {
     }
     else {
         console.log("q completed");
-
+        showResult ()
     }
 
 }
@@ -102,6 +102,12 @@ function optionSelected(answer) {
         mcqs.children[i].classList.add("disabled");
     }
     next_btn.style.display = "block";
+}
+function showResult(){
+info_box.classList.remove("activeInfo"); 
+    quiz_box.classList.remove("activeQuiz");
+    result_box.classList.add("activeResult");
+
 }
 function startTimer(time){
     timer_counter = setInterval(timer, 1000);
