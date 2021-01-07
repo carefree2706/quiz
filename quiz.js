@@ -1,5 +1,4 @@
 //getting all the Element 
-
 const start_btn = document.querySelector(".start_btn button");
 const info_box = document.querySelector(".info_box");
 const quit_btn = info_box.querySelector(".buttons .quit");
@@ -9,18 +8,18 @@ const timecount =quiz_box.querySelector(".timesecond");
 const mcqs = document.querySelector(".mcqs");
 
 
-//if start Quiz button clicked//
+
 start_btn.onclick = () => {
     info_box.classList.add("activeInfo")
 }
-//if exit btn clicked//
+
 quit_btn.onclick = () => {
     info_box.classList.remove("activeInfo");
 }
-//if continue button clicked
+
 continue_btn.onclick = () => {
-    info_box.classList.remove("activeInfo"); //hide info_box//
-    quiz_box.classList.add("activeQuiz"); // activate quiz_box//
+    info_box.classList.remove("activeInfo"); 
+    quiz_box.classList.add("activeQuiz");
     showQuestion(0);
     questionCounter(1);
     startTimer(10);
@@ -56,7 +55,7 @@ next_btn.onclick = () => {
 }
 
 
-//getting questions and options from array//
+
 function showQuestion(index) {
     const question_text = document.querySelector(".question");
 
@@ -98,7 +97,7 @@ function optionSelected(answer) {
         }
 
     }
-    //after user selected disable all options
+   
     for (let i = 0; i < allOptions; i++) {
         mcqs.children[i].classList.add("disabled");
     }
