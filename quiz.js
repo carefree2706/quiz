@@ -120,12 +120,24 @@ function startTimer(time){
         }
         if(time < 0){
             clearInterval(timer_counter);
-            timecount.textContent = "00"
+            timecount.textContent = "00";
+
+            let correctAns = questions[question_count].answer;
+            let allOptions = mcqs.children.length;
+
+            for (let i = 0; i < allOptions; i++) {
+                if (mcqs.children[i].textContent == correctAns) {
+                    mcqs.children[i].setAttribute("class", "option correct");
+                }
         }
+        for (let i = 0; i < allOptions; i++) {
+            mcqs.children[i].classList.add("disabled");
+        }
+        next_btn.style.display = "block";
     }
         
-    
-}
+}   
+    }
 
 function questionCounter(index) {
     const bottom_ques_counter = quiz_box.querySelector(".total_mcq");
