@@ -1,0 +1,272 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+{
+    margin: 0;
+    padding: 0;
+    box sizing: border-box;
+    font-family: 'Poppins', serif;
+
+}
+
+body{
+    background: rgb(151, 97, 221)
+}
+.start_btn,
+.info_box, 
+.quiz_box,
+.result_box
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+.info_box.activeInfo,
+.quiz_box.activeQuiz
+{
+    z-index: 5;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+    
+}
+
+
+/* start quiz button style*/
+.start_btn button{
+font-size: 50px;
+font-weight: 500px;
+color: rebeccapurple;
+font-family: Arial, Helvetica, sans-serif;
+padding: 20px 50px;
+border:powderblue solid 20px;
+cursor:alias ;
+}
+
+.info_box{
+ 
+    width: 550px; 
+    background-color: white;
+    border-radius: 10px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0 .9);
+
+}
+.info_box .info_title{
+    height: 60px;
+    width: 87%;
+    border-bottom: 2px solid rebeccapurple;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    font-size: 20px 
+
+}
+.info_box .info_list{
+    padding: 20px 35px;
+
+}
+.info_box .info_list .info{
+    margin: 10px;
+    font-size: 20px;
+}
+.info_box .info_list .info span{
+    font-weight: 700;
+    color: red
+}
+.info_box .buttons {
+    height: 50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:0 25px;
+    border-top: 2px solid rebeccapurple;
+    
+}
+.info_box .buttons button{
+    margin:0 10px;
+    height: 30px;
+    width: 200px;
+    border: 2px solid rebeccapurple;
+    background-color: gold;
+    font-size: 15px;
+    cursor: pointer;
+    
+    
+}
+
+.quiz_box{
+    width:550px;
+    background-color: white;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0 .9);
+  
+    
+}
+.quiz_box header{
+    height: 70px;
+    padding:0 40px;
+    background-color: gold;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;  
+    position: relative;
+    z-index: 90;
+}
+.quiz_box header .title{
+    font-size: 30px ;
+    font-weight: 400;
+}
+.quiz_box header .timer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    height: 50px;
+    background: lightblue;
+    border-radius: 5px; 
+}
+.quiz_box header .timer .time_left{
+    font-size: 18px;
+    font-weight: 300;
+    user-select: none;
+}
+.quiz_box header .timer .timesecond{
+    font-size: 20px;
+    font-weight: 700;
+    background: black;
+    color:silver;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    user-select:none;
+}
+.quiz_box header .time_line{
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+    width: 50%;
+    height: 4px;
+    background-color: pink;
+
+}
+
+
+.quiz_box section{
+    padding: 25px 30px 25px 30px;
+    background-color: white;
+
+}
+.quiz_box section .question{
+    font-size: 30px;
+    font-weight: 500;
+}
+.quiz_box section .mcqs{
+    padding: 20px 0;
+    display: block;
+}
+section .mcqs .mcq{
+    background-color:aliceblue;
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 10px 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+section .mcqs .mcq:hover{
+    color:rgb(151, 97, 221);
+    background-color: lightblue;
+
+}
+.mcqs .mcqs:last-child{
+    margin-bottom: 5px;
+}
+
+.mcqs .mcq .icon{
+    height: 20px;
+    width: 20px;
+
+
+}
+.mcqs .mcq.correct{
+    background-color: lightgreen;
+    border-color: pink;
+    
+}
+.mcqs .mcq.wrong{
+    background-color: pink;
+    
+}
+
+.mcqs .mcq.disabled {
+    pointer-events: none;
+    
+}
+.quiz_box footer{
+    height: 50px;
+    width: 90%;
+    padding: 0 40px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.quiz_box footer .total_mcq span{
+    display: flex;
+    user-select: none;
+}
+footer .total_mcq span p{
+    font-weight: 200;
+    padding: 0 20px
+}
+footer .next_btn{
+    height: 30px;
+    padding: 0 20px;
+    font-weight: 300;
+    font-size: 20px;
+    display: none;
+}
+.result_box{
+    background-color: lightblue;
+    width: 250px;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.5);
+    display: none;
+}
+.result_box .icon{
+    font-size: 50px;
+    color: lightgoldenrodyellow;
+
+}
+.result_box .accomplish_text{
+    font-size: 50px;
+    font-weight: 500;
+}
+.result_box .score_result span{
+    margin: 20px 0;
+    font-size: 20px;
+}
+.score_result span{
+    font-weight: 600;
+    padding:0 10px
+}
+.result_box .buttons{
+    display: flex;
+    margin-bottom: 10%;
+}
+.result_box .buttons .button{
+    cursor: pointer;
+    border-radius: 3px;
+}

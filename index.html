@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel ="stylesheet" href="style.css">
+    
+    <script src="http://kit.fontawesome.com/a076d05399.js"></script>
+
+</head>
+<body>
+    <!--start quiz-->
+    <div class="start_btn"><button>Start</button></div>
+
+    <!--info box-->
+    <div class="info_box">
+        <div class="info_title">
+            <span>some rules from the quiz</span>
+        </div>
+        <div class="info_list">
+            <div class="info">1.you will have only <span>15 secs</span> per Q</div>
+            <div class="info">2.once you choose your answer, you can't reselect.</div>
+            <div class="info">3.you can't select any option once time goes off.</div>
+            <div class="info">4.you can't exit from the quiz while you're playing.</div>
+            <div class="info">5.you'' get points on the correct answer.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">EXIT</button>
+            <button class="continue">PROCEED</button>
+        </div>
+    </div>
+
+    <!-- quiz box-->
+    <div class="quiz_box">
+        <header>
+            <div class="title">QUIZ</div>
+            <div class="timer">
+                <div class="time_left"> Time remaining</div>
+                <div class="timesecond">10</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+        <div class="question">
+            <span>What does HTML stand for?</span>
+        </div>
+        <div class="mcqs">
+            <div class="mcq">
+                <span>Hyper Text Multiplier  </span>
+                
+            </div>
+             <div class="mcq">
+                <span>Hyper Text Markup Language  </span>
+                
+            </div>
+            <div class="mcq">
+                <span>Hyper Text Multiple Language</span>    
+            </div>
+            <div class="mcq">
+                <span>Hyper Transformation Language</span>   
+            </div>
+        </section>
+      <!--quiz box footer-->  
+      <footer>
+          <div class="total_mcq">
+              <span><p>2 </p>/ <p> 5</p>questions</span>
+          </div>
+          <button class="next_btn">Proceed</button>
+      </footer>
+        </div>
+    </div>
+
+    <!--result-->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-coffee"></i>
+        </div>
+        <div class="accomplish_text">you've accomplished</div>
+        <div class="score_result">
+            <span>Try again...<p>2</p>/<p>5</p></span>
+        </div>
+        <div class="buttons">
+            <button class="redo">Redo Quiz</button>
+            <button class="quit">Quit Quiz</button>
+        </div>
+    </div>
+    <script src="question.js"></script>
+    <script src="quiz.js"></script>
+ 
+</body> 
+</html>
